@@ -1,0 +1,32 @@
+/* ===================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   Single source of truth for theming
+   =================================== */
+
+:root {
+    /* Colors */
+    --bg-primary: #18122B;
+    --bg-secondary: #25143A;
+    --bg-card: rgba(60, 20, 60, 0.85);
+    --accent-primary: #ff69b4;
+    --accent-secondary: #ba68c8;
+    --accent-gradient: linear-gradient(135deg, #ff69b4, #ba68c8, #7c3aed);
+    --text-primary: #f8bbd0;
+    --text-secondary: #e1bee7;
+    --text-muted: #b39ddb;
+    --border-color: rgba(186, 104, 200, 0.25);
+    --glow-color: rgba(255, 105, 180, 0.25);
+
+    /* Typography */
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Spacing */
+    --section-padding: 100px 20px;
+    --container-max: 1200px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}

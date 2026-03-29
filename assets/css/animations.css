@@ -1,0 +1,86 @@
+/* ===================================
+   ANIMATIONS & KEYFRAMES
+   All animation definitions
+   =================================== */
+
+/* ---- Reveal Animation ---- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---- Loading Animation ---- */
+@keyframes loading {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* ---- Pulse Animation ---- */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* ---- Glow Pulse Animation ---- */
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* ---- Status Pulse Animation ---- */
+@keyframes statusPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(0, 255, 136, 0); }
+}
+/* ---- Typing Effect (CSS Only) ---- */
+.typing-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    height: 1.2em;
+    vertical-align: bottom;
+}
+
+.typing-wrapper span {
+    display: block;
+    white-space: nowrap;
+}
+
+/* cursor */
+.typing-wrapper::after {
+    content: "|";
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+/* slide words */
+.typing-wrapper span {
+    animation: slideWords 7s infinite;
+}
+
+/* slide animation */
+@keyframes slideWords {
+    0%, 20% {
+        transform: translateY(0);
+    }
+    33%, 53% {
+        transform: translateY(-100%);
+    }
+    66%, 86% {
+        transform: translateY(-200%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* blinking cursor */
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}

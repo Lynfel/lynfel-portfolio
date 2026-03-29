@@ -1,0 +1,566 @@
+/* ===================================
+   SECTION-SPECIFIC STYLES
+   Individual section styling
+   =================================== */
+
+/* ===================================
+   LANDING SECTION
+   =================================== */
+.landing {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding-top: 120px;
+}
+
+.landing .content {
+    max-width: 550px;
+}
+
+.landing .intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.landing h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.flutter-word {
+    background: linear-gradient(90deg, #02569B, #54C5F8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    transition: var(--transition-medium);
+}
+
+.flutter-word:hover {
+    filter: brightness(1.2);
+}
+
+.landing .description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+/* Profile Image */
+.landing .image .profile-container {
+    position: relative;
+}
+
+.profile-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, #ffb6d5 0%, transparent 70%);
+    z-index: -1;
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+.profile-img {
+    width: 380px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid var(--border-color);
+    transition: var(--transition-medium);
+}
+
+.profile-container:hover .profile-img {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 40px var(--glow-color);
+}
+
+.overlay-image {
+    position: absolute;
+    bottom: -20px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background: var(--bg-secondary);
+    border-radius: 15px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.status-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--bg-secondary);
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #4CAF50;
+    border-radius: 50%;
+    animation: statusPulse 2s ease-in-out infinite;
+}
+
+/* ===================================
+   ABOUT SECTION
+   =================================== */
+.about-section {
+    padding: 80px 20px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    position: relative;
+}
+
+.image-frame {
+    position: relative;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+}
+
+.image-frame::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: var(--accent-gradient);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: var(--transition-medium);
+}
+
+.about-image:hover .image-frame::before {
+    opacity: 0.5;
+}
+
+.about-image img {
+    width: 350px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.about-content {
+    max-width: 500px;
+}
+
+.about-content .subtitle {
+    text-align: left;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.about-box {
+    padding: 25px;
+    overflow: hidden;
+}
+
+.about-text p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+/* ===================================
+   HOBBIES SECTION
+   =================================== */
+.hobbies-section {
+    padding: 80px 20px;
+}
+
+.hobbies-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.hobby-item {
+    width: 300px;
+    padding: 35px 25px;
+    text-align: center;
+}
+
+.hobby-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: rgba(0, 212, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-medium);
+}
+
+.hobby-icon i {
+    font-size: 1.8rem;
+    color: var(--accent-primary);
+}
+
+.hobby-item:hover .hobby-icon {
+    background: var(--accent-gradient);
+    border-color: transparent;
+    transform: scale(1.1);
+}
+
+.hobby-item:hover .hobby-icon i {
+    color: var(--text-primary);
+}
+
+.hobby-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.hobby-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ===================================
+   TIMELINE / JOURNEY SECTION
+   =================================== */
+.timeline-section {
+    padding: 80px 20px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 40px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -8px;
+    top: 0;
+}
+
+.timeline-content {
+    padding: 20px 25px;
+}
+
+.timeline-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* ===================================
+   SKILLS SECTION
+   =================================== */
+.skills-section {
+    padding: 80px 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.skills-category {
+    flex: 1 1 350px;
+    max-width: 400px;
+    padding: 30px;
+}
+
+.skills-category h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skills-category h3 i {
+    color: var(--accent-primary);
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.skill-header p {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.skill-percent {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent-primary);
+}
+
+/* Tools Category */
+.tools-category {
+    flex: 1 1 100%;
+    max-width: 900px;
+    padding: 30px;
+    text-align: center;
+}
+
+.tools-category h3 {
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: var(--transition-medium);
+}
+
+.tech-item:hover {
+    background: rgba(0, 212, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.tech-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: grayscale(30%);
+    transition: var(--transition-medium);
+}
+
+.tech-item:hover img {
+    filter: grayscale(0%);
+}
+
+.tech-item span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* ===================================
+   PROJECTS SECTION
+   =================================== */
+.projects-section {
+    padding: 80px 20px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: var(--transition-medium);
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--accent-gradient);
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.project-number {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.project-info p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ===================================
+   CONTACT SECTION
+   =================================== */
+.contact-section {
+    padding: 80px 20px;
+}
+
+.info-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: nowrap; /* 🔥 prevents wrapping */
+    overflow-x: auto;  /* 🔥 allows scroll if screen is small */
+    margin-bottom: 50px;
+}
+
+.info-card {
+    width: 280px;
+    padding: 30px 25px;
+    text-align: center;
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background: rgba(0, 212, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-medium);
+}
+
+.info-icon i {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+}
+
+.info-card:hover .info-icon {
+    background: var(--accent-gradient);
+}
+
+.info-card:hover .info-icon i {
+    color: var(--text-primary);
+}
+
+.info-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Contact CTA */
+.contact-cta {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(123, 44, 191, 0.1));
+}
+
+.contact-text .cta-label {
+    font-size: 0.9rem;
+    color: var(--accent-primary);
+    margin-bottom: 10px;
+}
+
+.contact-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-text .cta-description {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
